@@ -2,21 +2,21 @@
 @import '@coreui/coreui/scss/coreui';
 
 //Extra Overrides
-//.c-sidebar {
-//    background: #0f766e;
-//    color: #fff;
-//}
-//
+.c-sidebar {
+background: #3e81ec;
+color: #fffffff6;
+}
+
 .c-sidebar .c-sidebar-nav-link.c-active, .c-sidebar .c-active.c-sidebar-nav-dropdown-toggle {
-    color: #fff;
-    background: $primary;
+    color: #ffffff;
+    background: #3267C1;
 }
 //
 //
-//.c-sidebar .c-sidebar-nav-link:hover {
-//    color: #fff;
-//    background: #0d9488;
-//}
+.c-sidebar .c-sidebar-nav-link:hover {
+color: #ffffff;
+background:#3267C1;
+}
 
 .btn:not([class*=ghost]):not([class*=link]):not([class*=outline]):not([class*=transparent]) {
     border: 0;
