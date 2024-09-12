@@ -80,7 +80,7 @@
                         <tr>
                             <td colspan="8" class="text-center">
                         <span class="text-danger">
-                            Please search & select products!
+                            Silakan mencari dan pilih produk!
                         </span>
                             </td>
                         </tr>

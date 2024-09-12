@@ -10,9 +10,19 @@
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('images/y.png') }}">
     <!-- CoreUI CSS -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" crossorigin="anonymous">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Inline CSS for background image -->
+    <style>
+        body {
+            background-image: url('{{ asset('images/DANO.png') }}'); /* Ensure this path is correct */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Optional */
+        }
+    </style>
 </head>
 <body class="c-app flex-row align-items-center">
 <div class="container">

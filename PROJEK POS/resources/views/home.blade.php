@@ -20,7 +20,7 @@
                         </div>
                         <div>
                             <div class="text-value text-primary">{{ format_currency($revenue) }}</div>
-                            <div class="text-muted text-uppercase font-weight-bold small">Revenue</div>
+                            <div class="text-muted text-uppercase font-weight-bold small">Pendapatan</div>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                         </div>
                         <div>
                             <div class="text-value text-warning">{{ format_currency($sale_returns) }}</div>
-                            <div class="text-muted text-uppercase font-weight-bold small">Sales Return</div>
+                            <div class="text-muted text-uppercase font-weight-bold small">Pengembalian Penjualan</div>
                         </div>
                     </div>
                 </div>

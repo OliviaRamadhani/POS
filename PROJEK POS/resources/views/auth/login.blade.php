@@ -14,6 +14,17 @@
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+        <!-- Inline CSS for background image -->
+        <style>
+            body {
+                background-image: url('{{ asset('images/DANO.png') }}'); /* Ensure this path is correct */
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed; /* Optional */
+            }
+        </style>
 </head>
 
 <body class="c-app flex-row align-items-center">
@@ -36,7 +47,7 @@
                     <form id="login" method="post" action="{{ url('/login') }}">
                         @csrf
                         <h1 style="text-align:center">Login</h1>
-                        <p style="text-align:center">Sign In your account</p>
+                        <p style="text-align:center">Masuk ke akun Anda</p>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                     <span class="input-group-text">
@@ -85,8 +96,8 @@
             </div>
 
             <p class="text-center mt-5 lead">
-                Developed By
-                <a href="https://fahimanzam.netlify.app" class="font-weight-bold text-primary">AON Cashier</a>
+                 By
+                <a href="" class="font-weight-bold text-primary">AON Cashier</a>
             </p>
         </div>
     </div>
