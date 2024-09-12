@@ -39,7 +39,7 @@ class ProductTable extends Component
             return session()->flash('message', 'Can not generate Barcode with this type of Product Code');
         }
 
-        $this->barcodes = [];
+        $this->barcodes = [ dd($this->barcodes)];
 
         for ($i = 1; $i <= $quantity; $i++) {
             $barcode = DNS1DFacade::getBarCodeSVG($product->product_code, $product->product_barcode_symbology,2 , 60, 'black', false);
@@ -48,7 +48,7 @@ class ProductTable extends Component
     }
 
     public function getPdf() {
-        $pdf = \PDF::loadView('product::barcode.print', [
+        $pdf =  dd($this->barcodes)::loadView('product::barcode.print', [
             'barcodes' => $this->barcodes,
             'price' => $this->product->product_price,
             'name' => $this->product->product_name,
