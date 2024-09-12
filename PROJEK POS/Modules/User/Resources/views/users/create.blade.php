@@ -86,7 +86,7 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="image">Profile Image <span class="text-danger">*</span></label>
-                                <input id="image" type="file" name="image" data-max-file-size="500KB">
+                                <input id="image" type="file" name="image">
                             </div>
                         </div>
                     </div>

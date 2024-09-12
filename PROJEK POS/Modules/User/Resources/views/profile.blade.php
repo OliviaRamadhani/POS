@@ -24,13 +24,12 @@
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('profile.update') }}" method="POST">
+                        <form action="{{ route('profile.update') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('patch')
 
                             <div class="form-group">
-                                <label for="image">Profile Image <span class="text-danger">*</span></label>
-                                <input id="image" type="file" name="image" data-max-file-size="500KB">
+                                <img style="width: 200px;height: 200px;" class="d-block mx-auto img-thumbnail img-fluid rounded-circle mb-2" src="{{ asset('images/y.png') }}" alt="Profile Image">
                             </div>
 
                             <div class="form-group">

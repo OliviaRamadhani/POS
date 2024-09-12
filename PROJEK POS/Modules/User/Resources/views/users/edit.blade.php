@@ -71,7 +71,7 @@
                             <div class="form-group">
                                 <label for="image">Profile Image <span class="text-danger">*</span></label>
                                 <img style="width: 100px;height: 100px;" class="d-block mx-auto img-thumbnail img-fluid rounded-circle mb-2" src="{{ $user->getFirstMediaUrl('avatars') }}" alt="Profile Image">
-                                <input id="image" type="file" name="image" data-max-file-size="500KB">
+                                <input id="image" type="file" name="image">
                             </div>
                         </div>
                     </div>

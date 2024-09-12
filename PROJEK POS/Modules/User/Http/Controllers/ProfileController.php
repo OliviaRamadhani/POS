@@ -18,38 +18,41 @@ class ProfileController extends Controller
     }
 
 
-    public function update(Request $request) {
+    public function update(Request $request)
+    {
+        // Validasi data
         $request->validate([
             'name'  => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email,' . auth()->id()
+            'email' => 'required|email|unique:users,email,' . auth()->id(),
+            'image' => 'nullable|file|mimes:jpg,png,jpeg,gif|max:500',
         ]);
-
-        auth()->user()->update([
+    
+        // Update data pengguna
+        $user = auth()->user();
+        $user->update([
             'name'  => $request->name,
-            'email' => $request->email
+            'email' => $request->email,
         ]);
-
-        if ($request->has('image')) {
-            if ($request->has('image')) {
-                $tempFile = Upload::where('folder', $request->image)->first();
-
-                if (auth()->user()->getFirstMedia('avatars')) {
-                    auth()->user()->getFirstMedia('avatars')->delete();
-                }
-
-                if ($tempFile) {
-                    auth()->user()->addMedia(Storage::path('temp/' . $request->image . '/' . $tempFile->filename))->toMediaCollection('avatars');
-
-                    Storage::deleteDirectory('temp/' . $request->image);
-                    $tempFile->delete();
-                }
+    
+        // Menangani file gambar
+        if ($request->hasFile('image')) {
+            // Hapus gambar lama jika ada
+            if ($user->getFirstMedia('avatars')) {
+                $user->getFirstMedia('avatars')->delete();
             }
+    
+            // Simpan gambar baru
+            $image = $request->file('image');
+            $imagePath = $image->store('avatars', 'public');
+            $user->addMedia(storage_path('app/public/' . $imagePath))->toMediaCollection('avatars');
         }
-
-        toast('Profile Updated!', 'success');
-
+    
+        // Tampilkan notifikasi dan kembalikan ke halaman sebelumnya
+        session()->flash('success', 'Profile Updated!');
         return back();
     }
+    
+
 
     public function updatePassword(Request $request) {
         $request->validate([
