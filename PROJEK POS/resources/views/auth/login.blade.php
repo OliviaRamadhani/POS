@@ -8,9 +8,10 @@
     <title>Login | {{ config('app.name') }}</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('images/favicon.png') }}">
+    <link rel="icon" href="{{ asset('images/y.png') }}">
     <!-- CoreUI CSS -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" crossorigin="anonymous">
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
@@ -18,9 +19,7 @@
 <body class="c-app flex-row align-items-center">
 <div class="container">
     <div class="row mb-3">
-        <div class="col-12 d-flex justify-content-center">
-            <img width="200" src="{{ asset('images/logo-dark.png') }}" alt="Logo">
-        </div>
+        
     </div>
     <div class="row justify-content-center">
         <div class="col-md-5">
@@ -29,12 +28,15 @@
                     {{ Session::get('account_deactivated') }}
                 </div>
             @endif
-            <div class="card p-4 border-0 shadow-sm">
+            <div class="card p-5 border-0 shadow-sm">
+                <div class="col-12 d-flex justify-content-center">
+                    <img width="265" src="{{ asset('images/y.png') }}" alt="Logo">
+                </div>
                 <div class="card-body">
                     <form id="login" method="post" action="{{ url('/login') }}">
                         @csrf
-                        <h1>Login</h1>
-                        <p class="text-muted">Sign In to your account</p>
+                        <h1 style="text-align:center">Login</h1>
+                        <p style="text-align:center">Sign In your account</p>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                     <span class="input-group-text">
@@ -74,7 +76,7 @@
                             </div>
                             <div class="col-8 text-right">
                                 <a class="btn btn-link px-0" href="{{ route('password.request') }}">
-                                    Forgot password?
+                                    Reset Password?
                                 </a>
                             </div>
                         </div>
@@ -84,7 +86,7 @@
 
             <p class="text-center mt-5 lead">
                 Developed By
-                <a href="https://fahimanzam.netlify.app" class="font-weight-bold text-primary">Fahim Anzam Dip</a>
+                <a href="https://fahimanzam.netlify.app" class="font-weight-bold text-primary">AON Cashier</a>
             </p>
         </div>
     </div>
