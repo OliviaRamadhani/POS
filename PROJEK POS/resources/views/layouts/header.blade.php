@@ -49,16 +49,18 @@
     <li class="c-header-nav-item dropdown">
         <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button"
            aria-haspopup="true" aria-expanded="false">
-            <div class="c-avatar mr-2">
-                <img class="c-avatar rounded-circle" src="images/y.png" alt="Profile Image">
+           <div class="c-avatar mr-2">
+            <div class="c-avatar-container" style="position: relative;">
+                <img class="c-avatar rounded-circle" src={{ asset('images/y.png') }} alt="Profile Image" style="width: 50px; height: 50px; absolute;">
             </div>
+                    </div>
             <div class="d-flex flex-column">
                 <span class="font-weight-bold">{{ auth()->user()->name }}</span>
                 <span class="font-italic">Online <i class="bi bi-circle-fill text-success" style="font-size: 11px;"></i></span>
             </div>
         </a>
         <div class="dropdown-menu dropdown-menu-right pt-0">
-            <div class="dropdown-header bg-light py-2"><strong>Account</strong></div>
+            <div class="dropdown-header bg-light py-2"><strong></strong></div>
             <a class="dropdown-item" href="{{ route('profile.edit') }}">
                 <i class="mfe-2  bi bi-person" style="font-size: 1.2rem;"></i> Profil
             </a>

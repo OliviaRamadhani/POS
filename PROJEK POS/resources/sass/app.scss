@@ -3,19 +3,19 @@
 
 //Extra Overrides
 .c-sidebar {
-background: #3e81ec;
+background: #5271FF;
 color: #fffffff6;
 }
 
 .c-sidebar .c-sidebar-nav-link.c-active, .c-sidebar .c-active.c-sidebar-nav-dropdown-toggle {
     color: #ffffff;
-    background: #3267C1;
+    background: #425AD0;
 }
 //
 //
 .c-sidebar .c-sidebar-nav-link:hover {
 color: #ffffff;
-background:#3267C1;
+background: #425AD0;
 }
 
 .btn:not([class*=ghost]):not([class*=link]):not([class*=outline]):not([class*=transparent]) {
