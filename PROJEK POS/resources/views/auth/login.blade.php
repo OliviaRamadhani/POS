@@ -39,7 +39,7 @@
                     {{ Session::get('account_deactivated') }}
                 </div>
             @endif
-            <div class="card p-5 border-0 shadow-sm">
+            <div class="card p-5 border-90 shadow-sm">
                 <div class="col-12 d-flex justify-content-center">
                     <img width="265" src="{{ asset('images/y.png') }}" alt="Logo">
                 </div>

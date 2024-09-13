@@ -10,7 +10,7 @@
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('images/y.png') }}">
     <!-- CoreUI CSS -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
           integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
@@ -21,7 +21,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card mx-4">
-                <div class="card-body p-4">
+                <div class="card-body p-4 border-0 shadow-sm">
                     <form method="post" action="{{ url('/password/reset') }}">
                         @csrf
                         <h1>Reset Password</h1>
