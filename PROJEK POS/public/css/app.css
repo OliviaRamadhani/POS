@@ -35,7 +35,6 @@
     --light: #ebedef;
     --dark: #636f83;
     --color: #3c4b64;
-    background-color: #ebedef;
     color: #3c4b64
 }
 
@@ -3921,13 +3920,16 @@ html:not([dir=rtl]) .card-link+.card-link {
 }
 
 .card-group>.card {
-    margin-bottom: 15px
+    margin-bottom: 15px;
+
 }
 
 @media (min-width:576px) {
     .card-group {
         display: flex;
-        flex-flow: row wrap
+        flex-flow: row wrap;
+        box-shadow: 3px 5px 10px rgba (0, 0, 0, 0.5);
+
     }
 
     .card-group>.card {
@@ -14095,7 +14097,7 @@ html:not([dir=rtl]) .list-inline {
 .c-app {
     display: flex;
     flex-direction: row;
-    min-height: 100vh
+    min-height: 100vh;
 }
 
 @media (-ms-high-contrast:none) {
