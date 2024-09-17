@@ -13,7 +13,7 @@
                         <div class="card border-0 shadow h-100">
                             <div class="position-relative">
                                 <img height="200" src="{{ $product->getFirstMediaUrl('images') }}" class="card-img-top" alt="Product Image">
-                                <div class="badge badge-info mb-3 position-absolute" style="left:10px;top: 10px;">Stock: {{ $product->product_quantity }}</div>
+                                <div class="badge badge-info mb-3 position-absolute" style="left:10px;top: 10px;">Stok : {{ $product->product_quantity }}</div>
                             </div>
                             <div class="card-body">
                                 <div class="mb-2">
@@ -29,7 +29,7 @@
                 @empty
                     <div class="col-12">
                         <div class="alert alert-warning mb-0">
-                            Products Not Found...
+                            Produk Tidak Ditemukan...
                         </div>
                     </div>
                 @endforelse

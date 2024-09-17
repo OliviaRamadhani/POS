@@ -5,8 +5,8 @@
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('products.index') }}">Products</a></li>
-        <li class="breadcrumb-item active">Details</li>
+        <li class="breadcrumb-item"><a href="{{ route('products.index') }}">Produk</a></li>
+        <li class="breadcrumb-item active">Detail</li>
     </ol>
 @endsection
 
@@ -24,7 +24,7 @@
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped mb-0">
                                 <tr>
-                                    <th>Product Code</th>
+                                    <th>Kode Produk</th>
                                     <td>{{ $product->product_code }}</td>
                                 </tr>
                                 <tr>
@@ -32,42 +32,42 @@
                                     <td>{{ $product->product_barcode_symbology }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Name</th>
+                                    <th>Nama</th>
                                     <td>{{ $product->product_name }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Category</th>
+                                    <th>Kategori</th>
                                     <td>{{ $product->category->category_name }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Cost</th>
+                                    <th>Biaya</th>
                                     <td>{{ format_currency($product->product_cost) }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Price</th>
+                                    <th>Harga</th>
                                     <td>{{ format_currency($product->product_price) }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Quantity</th>
+                                    <th>Kuantitas</th>
                                     <td>{{ $product->product_quantity . ' ' . $product->product_unit }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Stock Worth</th>
+                                    <th>Nilai Saham</th>
                                     <td>
                                         COST:: {{ format_currency($product->product_cost * $product->product_quantity) }} /
                                         PRICE:: {{ format_currency($product->product_price * $product->product_quantity) }}
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>Alert Quantity</th>
+                                    <th>Jumlah Peringatan</th>
                                     <td>{{ $product->product_stock_alert }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Tax (%)</th>
+                                    <th>Pajak (%)</th>
                                     <td>{{ $product->product_order_tax ?? 'N/A' }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Tax Type</th>
+                                    <th>Tipe Pajak</th>
                                     <td>
                                         @if($product->product_tax_type == 1)
                                             Exclusive
@@ -79,7 +79,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>Note</th>
+                                    <th>Catatan</th>
                                     <td>{{ $product->product_note ?? 'N/A' }}</td>
                                 </tr>
                             </table>

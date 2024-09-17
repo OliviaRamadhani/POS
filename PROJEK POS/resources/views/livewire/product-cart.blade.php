@@ -20,7 +20,7 @@
                 <thead class="thead-dark">
                 <tr>
                     <th class="align-middle">Product</th>
-                    <th class="align-middle text-center">Net Unit Price</th>
+                    <th class="align-middle text-center"></th>
                     <th class="align-middle text-center">Stock</th>
                     <th class="align-middle text-center">Quantity</th>
                     <th class="align-middle text-center">Discount</th>
@@ -99,16 +99,16 @@
                         <td>(+) {{ format_currency(Cart::instance($cart_instance)->tax()) }}</td>
                     </tr>
                     <tr>
-                        <th>Discount ({{ $global_discount }}%)</th>
+                        <th>Diskon ({{ $global_discount }}%)</th>
                         <td>(-) {{ format_currency(Cart::instance($cart_instance)->discount()) }}</td>
                     </tr>
                     <tr>
-                        <th>Shipping</th>
+                        <th>Pengiriman</th>
                         <input type="hidden" value="{{ $shipping }}" name="shipping_amount">
                         <td>(+) {{ format_currency($shipping) }}</td>
                     </tr>
                     <tr>
-                        <th>Grand Total</th>
+                        <th>Total</th>
                         @php
                             $total_with_shipping = Cart::instance($cart_instance)->total() + (float) $shipping
                         @endphp

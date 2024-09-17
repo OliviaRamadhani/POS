@@ -69,20 +69,20 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Order Tax ({{ $global_tax }}%)</th>
+                                        <th>Pajak Order ({{ $global_tax }}%)</th>
                                         <td>(+) {{ format_currency(Cart::instance($cart_instance)->tax()) }}</td>
                                     </tr>
                                     <tr>
-                                        <th>Discount ({{ $global_discount }}%)</th>
+                                        <th>Diskon ({{ $global_discount }}%)</th>
                                         <td>(-) {{ format_currency(Cart::instance($cart_instance)->discount()) }}</td>
                                     </tr>
                                     <tr>
-                                        <th>Shipping</th>
+                                        <th>Pengiriman</th>
                                         <input type="hidden" value="{{ $shipping }}" name="shipping_amount">
                                         <td>(+) {{ format_currency($shipping) }}</td>
                                     </tr>
                                     <tr class="text-primary">
-                                        <th>Grand Total</th>
+                                        <th>Total</th>
                                         @php
                                             $total_with_shipping = Cart::instance($cart_instance)->total() + (float) $shipping
                                         @endphp

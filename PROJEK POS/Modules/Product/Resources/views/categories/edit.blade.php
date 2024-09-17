@@ -5,7 +5,7 @@
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('products.index') }}">ProduK</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('products.index') }}">Produk</a></li>
         <li class="breadcrumb-item"><a href="{{ route('product-categories.index') }}">Kategori</a></li>
         <li class="breadcrumb-item active">Edit</li>
     </ol>
@@ -23,11 +23,11 @@
                             @method('patch')
                             <div class="form-group">
                                 <label class="font-weight-bold" for="category_code">Kategori Kode <span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="category_code" required value="{{ $category->category_code }}">
+                                <input class="form-control" type="text" name="category_code" required value="{{ $category->kode_kategori }}">
                             </div>
                             <div class="form-group">
                                 <label class="font-weight-bold" for="category_name">Nama Kategori <span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="category_name" required value="{{ $category->category_name }}">
+                                <input class="form-control" type="text" name="category_name" required value="{{ $category->nama_kategori }}">
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">Update <i class="bi bi-check"></i></button>

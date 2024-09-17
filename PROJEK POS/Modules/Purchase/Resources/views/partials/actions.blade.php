@@ -11,7 +11,7 @@
         @can('access_purchase_payments')
             @if($data->due_amount > 0)
                 <a href="{{ route('purchase-payments.create', $data->id) }}" class="dropdown-item">
-                    <i class="bi bi-plus-circle-dotted mr-2 text-success" style="line-height: 1;"></i> Add Payment
+                    <i class="bi bi-plus-circle-dotted mr-2 text-success" style="line-height: 1;"></i> Tambahkan Pembayaran
                 </a>
             @endif
         @endcan
@@ -22,7 +22,7 @@
         @endcan
         @can('show_purchases')
             <a href="{{ route('purchases.show', $data->id) }}" class="dropdown-item">
-                <i class="bi bi-eye mr-2 text-info" style="line-height: 1;"></i> Details
+                <i class="bi bi-eye mr-2 text-info" style="line-height: 1;"></i> Detail
             </a>
         @endcan
         @can('delete_purchases')
@@ -31,7 +31,7 @@
                 if (confirm('Are you sure? It will delete the data permanently!')) {
                 document.getElementById('destroy{{ $data->id }}').submit()
                 }">
-                <i class="bi bi-trash mr-2 text-danger" style="line-height: 1;"></i> Delete
+                <i class="bi bi-trash mr-2 text-danger" style="line-height: 1;"></i> Hapus
                 <form id="destroy{{ $data->id }}" class="d-none" action="{{ route('purchases.destroy', $data->id) }}" method="POST">
                     @csrf
                     @method('delete')

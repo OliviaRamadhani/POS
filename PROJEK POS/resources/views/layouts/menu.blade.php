@@ -49,13 +49,13 @@
             @can('create_adjustments')
                 <li class="c-sidebar-nav-item">
                     <a class="c-sidebar-nav-link {{ request()->routeIs('adjustments.create') ? 'c-active' : '' }}" href="{{ route('adjustments.create') }}">
-                        <i class="c-sidebar-nav-icon bi bi-journal-plus" style="line-height: 1;"></i> Adjustment
+                        <i class="c-sidebar-nav-icon bi bi-journal-plus" style="line-height: 1;"></i> Penyesuaian
                     </a>
                 </li>
             @endcan
             <li class="c-sidebar-nav-item">
                 <a class="c-sidebar-nav-link {{ request()->routeIs('adjustments.index') ? 'c-active' : '' }}" href="{{ route('adjustments.index') }}">
-                    <i class="c-sidebar-nav-icon bi bi-journals" style="line-height: 1;"></i> All Adjustments
+                    <i class="c-sidebar-nav-icon bi bi-journals" style="line-height: 1;"></i> Semua Penyesuaian
                 </a>
             </li>
         </ul>

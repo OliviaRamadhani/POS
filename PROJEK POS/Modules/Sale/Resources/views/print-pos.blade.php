@@ -83,24 +83,24 @@
 
             @if($sale->tax_percentage)
                 <tr>
-                    <th colspan="2" style="text-align:left">Tax ({{ $sale->tax_percentage }}%)</th>
+                    <th colspan="2" style="text-align:left">Pajak ({{ $sale->tax_percentage }}%)</th>
                     <th style="text-align:right">{{ format_currency($sale->tax_amount) }}</th>
                 </tr>
             @endif
             @if($sale->discount_percentage)
                 <tr>
-                    <th colspan="2" style="text-align:left">Discount ({{ $sale->discount_percentage }}%)</th>
+                    <th colspan="2" style="text-align:left">Diskon ({{ $sale->discount_percentage }}%)</th>
                     <th style="text-align:right">{{ format_currency($sale->discount_amount) }}</th>
                 </tr>
             @endif
             @if($sale->shipping_amount)
                 <tr>
-                    <th colspan="2" style="text-align:left">Shipping</th>
+                    <th colspan="2" style="text-align:left">Pengiriman</th>
                     <th style="text-align:right">{{ format_currency($sale->shipping_amount) }}</th>
                 </tr>
             @endif
             <tr>
-                <th colspan="2" style="text-align:left">Grand Total</th>
+                <th colspan="2" style="text-align:left">Total</th>
                 <th style="text-align:right">{{ format_currency($sale->total_amount) }}</th>
             </tr>
             </tbody>

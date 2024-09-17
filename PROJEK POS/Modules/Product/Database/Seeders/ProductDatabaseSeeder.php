@@ -19,8 +19,8 @@ class ProductDatabaseSeeder extends Seeder
         Model::unguard();
 
         Category::create([
-            'category_code' => 'CA_01',
-            'category_name' => 'Random'
+            'kode_kategori' => 'CA_01',
+            'nama_kategori' => 'Random'
         ]);
 
         Unit::create([

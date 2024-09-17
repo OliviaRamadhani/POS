@@ -23,23 +23,23 @@
                                     <td>{{ $supplier->supplier_name }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Supplier Email</th>
+                                    <th>Email Supplier </th>
                                     <td>{{ $supplier->supplier_email }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Supplier Phone</th>
+                                    <th>Telepon Supplier</th>
                                     <td>{{ $supplier->supplier_phone }}</td>
                                 </tr>
                                 <tr>
-                                    <th>City</th>
+                                    <th>Kota</th>
                                     <td>{{ $supplier->city }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Country</th>
+                                    <th>Negara</th>
                                     <td>{{ $supplier->country }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Address</th>
+                                    <th>Alamat</th>
                                     <td>{{ $supplier->address }}</td>
                                 </tr>
                             </table>
